@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a ONG União para saber mais sobre nossos projetos e como você pode ajudar.">
+    <title>Contato - ONG União</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/icons/logo ong uniao.png" alt="ONG União"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="adote.html">Adote</a></li>
+                    <li><a href="doe.html">Doe</a></li>
+                    <li><a href="voluntarie-se.html">Voluntarie-se</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                    <li><a href="blog.html">Blog/Notícias</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="parceiros.html">Parceiros e Patrocinadores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h1>Contato</h1>
+                <p>Entre em contato conosco para saber mais sobre nossos projetos e como você pode ajudar.</p>
+                <form action="enviar_contato.php" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">Whatsapp:</label>
+                        <input type="whatsap" id="whatsap" name="whatsap" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+<br><br><br><br>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ONG União. Todos os direitos reservados.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Política de Privacidade</a></li>
+                <li><a href="terms.html">Termos de Serviço</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

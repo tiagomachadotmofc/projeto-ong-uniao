@@ -1,0 +1,1092 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilo do Header */
+header {
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1px;
+}
+
+header .logo a {
+    display: inline-block;
+}
+
+header .logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 252, 252);
+    font-weight: 700;
+    padding: 10px 15px;
+    white-space: nowrap; /* Impede quebra de linha */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+header nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(74, 15, 106);
+    border-radius: 5px;
+   
+}
+
+/* Estilo do Hero */
+.hero {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* Estilo do Footer */
+footer {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da Seção Sobre Nós */
+.about {
+    background-color: rgb(255, 255, 255); /* Cor de fundo para destacar a seção */
+    padding: 60px 20px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgb(74, 15, 106); /* Cor do título */
+    font-weight: 700;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px; /* Largura máxima para o texto */
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: rgb(51, 51, 51);
+}
+
+.about-text .cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: rgb(74, 15, 106); /* Cor do botão */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-text .cta-button:hover {
+    background-color: rgb(74, 15, 106); /* Cor de destaque no hover */
+    transform: scale(1.05);
+}
+
+.about-image {
+    flex: 1;
+    max-width: 600px; /* Largura máxima para a imagem */
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da Seção de Eventos */
+.events {
+    background-color: rgb(245, 245, 245); /* Cor de fundo para destacar a seção */
+    padding: 60px 20px;
+}
+
+.events h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgb(74, 15, 106); /* Cor do título */
+    font-weight: 700;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-item {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    /*Larguramáximadositensdeevento*/box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.event-info {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.event-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+}
+
+.event-info p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: rgb(102, 102, 102);
+}
+
+.event-info .cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: rgb(74, 15, 106);
+    /*Cordobotão*/color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+    -moz-transition: background-color 0.3s ease, transform 0.3s ease;
+    -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+    -o-transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.event-info .cta-button:hover {
+    background-color: rgb(74, 15, 106);
+    /*Cordedestaquenohover*/transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.event-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+/* Estilo da Seção de Doação */
+.donate {
+    background-color: rgb(245, 245, 245); /* Cor de fundo para destacar a seção */
+    padding: 60px 20px;
+}
+
+.donate h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgb(74, 15, 106); /* Cor do título */
+    font-weight: 700;
+}
+
+.donate-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.donate-text {
+    flex: 1;
+    max-width: 600px; /* Largura máxima para o texto */
+    text-align: center;
+}
+
+.donate-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: rgb(51, 51, 51);
+}
+
+.donate-text .cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: rgb(74, 15, 106); /* Cor do botão */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.donate-text .cta-button:hover {
+    background-color: rgb(74, 15, 106); /* Cor de destaque no hover */
+    transform: scale(1.05);
+}
+
+.donate-image {
+    flex: 1;
+    max-width: 600px; /* Largura máxima para a imagem */
+    display: flex;
+    justify-content: center;
+}
+
+.donate-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do Botão CTA */
+.cta-button {
+    display: inline-block;
+    background-color: rgb(74, 15, 106); /* Cor de fundo roxo */
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    padding: 15px 30px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-align: center; /* Centralizar texto */
+    text-decoration: none; /* Remover sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.cta-button:hover {
+    background-color: rgb(74, 15, 106); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+/* Página Sobre Nós */
+main {
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho fixo */
+}
+
+section.about {
+    padding: 60px 0;
+    background-color: rgb(244, 244, 244); /* Cor de fundo suave para destacar a seção */
+}
+
+section.about h1 {
+    color: rgb(74, 74, 74);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.about p {
+    line-height: 1.8;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.1em;
+    color: rgb(102, 102, 102);
+}
+
+section.about p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Estilos para o botão CTA (Se aplicável) */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 175, 80); /* Verde para botões CTA */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+footer ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo ativo do menu */
+nav ul li a.active {
+    border-bottom: 2px solid rgb(76, 175, 80); /* Destaque para a página atual */
+}
+
+/* Página Adote */
+main {
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho fixo */
+}
+
+section.adoption {
+    padding: 60px 0;
+    background-color: rgb(249, 249, 249); /* Cor de fundo suave para destacar a seção */
+}
+
+section.adoption h1 {
+    color: rgb(74, 15, 106);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.adoption p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgb(102, 102, 102);
+}
+
+.adoption-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.adoption-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.adoption-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.adoption-info {
+    padding: 20px;
+}
+
+.adoption-info h2 {
+    color: rgb(74, 15, 106);
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.adoption-info p {
+    color: rgb(102, 102, 102);
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 175, 80); /* Verde para botões CTA */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* Página Doe */
+main {
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho fixo */
+}
+
+section.donation {
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.76); /* Cor de fundo suave para destacar a seção */
+}
+
+section.donation h1 {
+    color: rgb(74, 15, 106);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.donation p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgb(102, 102, 102);
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.donation-option {
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+.donation-option h2 {
+    color: rgb(74, 15, 106);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.donation-option p {
+    color: rgb(102, 102, 102);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 175, 80); /* Verde para botões CTA */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* Página Voluntarie-se */
+main {
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho fixo */
+}
+
+section.volunteer {
+    padding: 60px 0;
+    background-color: rgb(249, 249, 249); /* Cor de fundo suave para destacar a seção */
+}
+
+section.volunteer h1 {
+    color: rgb(74, 15, 106);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.volunteer p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgb(102, 102, 102);
+}
+
+.volunteer-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.volunteer-option {
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+.volunteer-option h2 {
+    color: rgb(74, 15, 106);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.volunteer-option p {
+    color: rgb(102, 102, 102);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 175, 80); /* Verde para botões CTA */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: rgb(36, 80, 38);
+}
+
+/* Página Eventos */
+main {
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho fixo */
+}
+
+section.events {
+    padding: 60px 0;
+    background-color: rgb(249, 249, 249); /* Cor de fundo suave para destacar a seção */
+}
+
+section.events h1 {
+    color: rgb(74, 15, 106);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.events p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgb(102, 102, 102);
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-item {
+    flex: 1 1 calc(45% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+.event-item h2 {
+    color: rgb(74, 15, 106);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    color: rgb(102, 102, 102);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 175, 80); /* Verde para botões CTA */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* Página Contato */
+main {
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho fixo */
+}
+
+section.contact {
+    padding: 60px 0;
+    background-color: rgba(249, 249, 249, 0.582); /* Cor de fundo suave para destacar a seção */
+}
+
+section.contact h1 {
+    color: rgb(74, 15, 106);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.contact p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgb(0, 0, 0);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(74, 15, 106); /* roxo para botões CTA */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+/* Página Blog/Notícias */
+section.blog {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section.blog h1 {
+    color: rgb(74, 15, 106); /* Cor roxa */
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+section.blog h2 {
+    color: rgb(74, 15, 106); /* Cor roxa */
+}
+
+section.blog p {
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article .post {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ajuste conforme necessário */
+    max-width: 800px; /* Ajuste conforme necessário */
+}
+
+.article .post h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.article .post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.article .post p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(20, 140, 36);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: rgb(74, 15, 106);
+}
+
+/* Estilos Específicos da Página da Galeria */
+section.gallery {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section.gallery h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: rgb(74, 15, 106); /* Cor roxa */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer; /* E adicionado para indicar que a imagem é clicável */
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, .close {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(187, 187, 187);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Estilos Específicos da Página da Loja */
+section.shop {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section.shop h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: rgb(74, 15, 106); /* Cor roxo */
+}
+
+section.shop p {
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.product-item {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer; /* E adicionado para indicar que a imagem é clicável */
+    margin-bottom: 15px;
+}
+
+.product-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgb(74, 15, 106); /* Cor roxa */
+}
+
+.product-item p {
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+.product-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+.product-item .buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(74, 15, 106);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product-item .buy-button:hover {
+    background-color: rgb(255, 235, 59);
+    color: rgb(74, 15, 106);
+}
+
+/* Estilos Específicos da Página de Parceiros */
+section.partners {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section.partners h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+section.partners p {
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.partner-item {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.partner-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.partner-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.partner-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgb(0, 0, 0); /* Cor preta */
+}
+
+.partner-item p {
+    color: rgb(0, 0, 0); /* Cor preta */
+}
